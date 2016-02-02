@@ -283,6 +283,7 @@
 				43D9BA551C61344100A9B586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
