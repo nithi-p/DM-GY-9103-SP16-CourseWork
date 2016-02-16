@@ -1,7 +1,6 @@
 # App idea 2
 
-### Idea
-* Science problems & practices app for high school student
+### Science problems & practices app for high school student
 
 
 ### 8 possible features

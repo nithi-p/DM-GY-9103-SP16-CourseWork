@@ -1,8 +1,7 @@
 # App idea 1
 
-### Idea
+### Information shadow of things
 ![idea1](http://img-2.gizmag.com/qr-codes-3d-images.jpg?auto=format&ch=Width%2CDPR&crop=entropy&fit=crop&h=394&q=60&w=700&s=6dd5946f4574530f2fc89567dd1304fa)
-* Information shadow of things
 
 
 
