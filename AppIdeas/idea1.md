@@ -1,37 +1,38 @@
 # App idea 1
 
 ### Idea
-* Science problems & practices app for high school student
+![idea1](http://img-2.gizmag.com/qr-codes-3d-images.jpg?auto=format&ch=Width%2CDPR&crop=entropy&fit=crop&h=394&q=60&w=700&s=6dd5946f4574530f2fc89567dd1304fa)
+* Information shadow of things
+
+
 
 
 ### 8 possible features
-* Mark favorite or highlight problems
-* Choose levels
-* Create tutorial for other studens
-* Find tutorials
-* Score and rewards system
-* Virtual test + timer
-* Challenge with other friends
-* Push notification : encourage students to practice 3 problems a day
+* Note taking
+* Video recording
+* Voice recording
+* Photo taking
+* Store the media in the server
+* Generate QR code for what people record
+* Print that QR code
 
 
 ### Target audience
-![Thai high school student](http://www.theactkk.net/system_news/images_upload_answer/201556165251.jpg)
-
-Thai high school students
-* Are under pressure in college admission
-* Become lazy when practicing science problems
-* Can be easily distracted
+![idea1](http://xb022.com/wp-content/uploads/Parcel-delivery.jpg)
+People who send their gift to someone
+* Concern emotional value
+* Would like to send a message to the one they care
+* Some people don't know how to create the media then upload and etc.
+* Some people don't have time to create the media then upload and etc.
 
 
 ### Selected features
-* Score and rewards system
-* Virtual test + timer
-* Find tutorials
-
+* 10 seconds video recording
+* Store the video in the server
+* Generate QR code for what people record and allow them to print
 
 
 ### App Definition Statement
-"An online Science practices that uses gamification to help Thai high school students enjoy practicing and achieve their goals in college admission"
+"An app for people who want send their gifts to someone with video attached to the parcels"
 
-![idea1](http://prasanpanich.com/witory/wp-content/uploads/2016/02/Screen-Shot-2016-02-16-at-4.08.52-PM.png)
+![idea1](http://prasanpanich.com/witory/wp-content/uploads/2016/02/FullSizeRender.jpg)
