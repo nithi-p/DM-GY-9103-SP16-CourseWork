@@ -1,33 +1,36 @@
-# APP Idea 1
+# App idea 1
 
 ### Idea
-* A
+* Science problems & practices app for high school student
 
-![idea1](https://lh4.googleusercontent.com/kEKA5plv1CdRB7Gm1nfRZV9UDWMiF-KcJJKkIeaODEVqn9MNSKWgW2Cb3xOwgT_lFjKULg)
 
 ### 8 possible features
-* feature1
-* feature2
-* feature3
-* feature4
-* feature5
-* feature6
-* feature7
-* feature8
+* Mark favorite or highlight problems
+* Choose levels
+* Create tutorial for other studens
+* Find tutorials
+* Score and rewards system
+* Virtual test + timer
+* Challenge with other friends
+* Push notification : encourage students to practice 3 problems a day
+
 
 ### Target audience
 Thai high school students
-* Lack of learning motivation
-* Concern about university admission
+![Thai high school student](http://www.theactkk.net/system_news/images_upload_answer/201556165251.jpg)
+* Are under pressure in college admission
+* Become lazy when practicing science problems
 * Can be easily distracted
 
+
 ### Selected features
-* Feature 1
-* Feature 2
-* Feature 3
+* Score and rewards system
+* Virtual test + timer
+* Find tutorials
+
 
 
 ### App Definition Statement
-"App definition statement1"
+"An online Science practices that uses gamification to help Thai high school students enjoy practicing and achieve their goals in college admission"
 
-![idea1](https://lh6.googleusercontent.com/Z3jPC_3bXHq9Qp0q3n6fZY64X7Wx2j3vtbCFQBqYX4M1JnBnLxTHA3jw4qqv6H24U4TqZw)
+![idea1](http://prasanpanich.com/witory/wp-content/uploads/2016/02/Screen-Shot-2016-02-16-at-4.08.52-PM.png)
