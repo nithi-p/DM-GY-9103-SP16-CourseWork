@@ -16,8 +16,9 @@
 
 
 ### Target audience
-Thai high school students
 ![Thai high school student](http://www.theactkk.net/system_news/images_upload_answer/201556165251.jpg)
+
+Thai high school students
 * Are under pressure in college admission
 * Become lazy when practicing science problems
 * Can be easily distracted
