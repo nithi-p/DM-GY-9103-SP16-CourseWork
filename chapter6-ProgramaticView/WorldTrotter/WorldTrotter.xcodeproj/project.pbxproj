@@ -11,6 +11,8 @@
 		438CCCD61C6A895500F523CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438CCCD41C6A895500F523CC /* Main.storyboard */; };
 		438CCCD81C6A895500F523CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438CCCD71C6A895500F523CC /* Assets.xcassets */; };
 		438CCCDB1C6A895500F523CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438CCCD91C6A895500F523CC /* LaunchScreen.storyboard */; };
+		438F94211C8B607C002C9DCB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F94201C8B607C002C9DCB /* WebKit.framework */; };
+		438F94231C8B6269002C9DCB /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F94221C8B6269002C9DCB /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		439EFC6A1C733401001B585B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439EFC691C733401001B585B /* MapKit.framework */; };
 		439EFC6C1C7345DB001B585B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439EFC6B1C7345DB001B585B /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		43E22F321C709398005C88B8 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E22F311C709398005C88B8 /* ConversionViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -23,6 +25,8 @@
 		438CCCD71C6A895500F523CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438CCCDA1C6A895500F523CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		438CCCDC1C6A895500F523CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438F94201C8B607C002C9DCB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		438F94221C8B6269002C9DCB /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		439EFC691C733401001B585B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		439EFC6B1C7345DB001B585B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		43E22F311C709398005C88B8 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438F94211C8B607C002C9DCB /* WebKit.framework in Frameworks */,
 				439EFC6A1C733401001B585B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +48,7 @@
 		438CCCC41C6A895400F523CC = {
 			isa = PBXGroup;
 			children = (
+				438F94201C8B607C002C9DCB /* WebKit.framework */,
 				439EFC691C733401001B585B /* MapKit.framework */,
 				438CCCCF1C6A895500F523CC /* WorldTrotter */,
 				438CCCCE1C6A895500F523CC /* Products */,
@@ -62,6 +68,7 @@
 			children = (
 				438CCCD01C6A895500F523CC /* AppDelegate.swift */,
 				438CCCD41C6A895500F523CC /* Main.storyboard */,
+				438F94221C8B6269002C9DCB /* WebViewController.swift */,
 				439EFC6B1C7345DB001B585B /* MapViewController.swift */,
 				43E22F311C709398005C88B8 /* ConversionViewController.swift */,
 				438CCCD71C6A895500F523CC /* Assets.xcassets */,
@@ -144,6 +151,7 @@
 				43E22F321C709398005C88B8 /* ConversionViewController.swift in Sources */,
 				439EFC6C1C7345DB001B585B /* MapViewController.swift in Sources */,
 				438CCCD11C6A895500F523CC /* AppDelegate.swift in Sources */,
+				438F94231C8B6269002C9DCB /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
