@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ConversionViewController: UIViewController, UITextFieldDelegate {
+class ConversionViewController: UIViewController  {
 	
 	
 	//SILVER CHALLENGE
@@ -83,7 +83,6 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	
-
 	
 	func textField(textField: UITextField,
 		shouldChangeCharactersInRange range: NSRange,
@@ -103,6 +102,4 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
 			
 	}
 
-
-	
 }
