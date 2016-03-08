@@ -64,6 +64,8 @@ class ViewController: UIViewController {
 	
 	func animateLabelTransitions() {
 		
+		// Force any outstanding layout changes
+		view.layoutIfNeeded()
 
 		
 		// Animate the alpha
@@ -73,7 +75,7 @@ class ViewController: UIViewController {
 		self.currentQuestionLabelCenterXConstraint.constant += screenWidth
 		UIView.animateWithDuration(0.5,
 			delay: 0,
-			options: [],
+			options: [.CurveLinear],
 			animations: {
 			self.currentQuestionLabel.alpha = 0
 			self.nextQuestionLabel.alpha = 1
@@ -82,6 +84,10 @@ class ViewController: UIViewController {
 			completion: { _ in
 				swap(&self.currentQuestionLabel,
 					&self.nextQuestionLabel)
+				swap(&self.currentQuestionLabelCenterXConstraint,
+				&self.nextQuestionLabelCenterXConstraint)
+				
+				self.updateOffScreenLabel()
 			}
 		)
 	}
