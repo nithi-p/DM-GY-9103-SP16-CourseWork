@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 
 
 
-	@IBOutlet var questionLabel: UILabel!
+	@IBOutlet var currentQuestionLabel: UILabel!
+	@IBOutlet var nextQuestionLabel: UILabel!
 	@IBOutlet var answerLabel: UILabel!
 	
 	
