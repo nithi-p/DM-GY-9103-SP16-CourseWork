@@ -14,8 +14,15 @@ class ViewController: UIViewController {
 
 
 	@IBOutlet var currentQuestionLabel: UILabel!
+	@IBOutlet var currentQuestionLabelCenterXConstraint: NSLayoutConstraint!
 	@IBOutlet var nextQuestionLabel: UILabel!
+	@IBOutlet var nextQuestionLabelCenterXConstraint: NSLayoutConstraint!
 	@IBOutlet var answerLabel: UILabel!
+
+	
+	
+
+	
 	
 	
 	let questions: [String] = ["From what is cognac made?", "What is 7+7?","What is the capital of Vermont?"]
@@ -31,7 +38,7 @@ class ViewController: UIViewController {
 		}
 		
 		let question: String = questions[currentQuestionIndex]
-		questionLabel.text = question
+		nextQuestionLabel.text = question
 		answerLabel.text = "???"
 		
 		animateLabelTransitions()
@@ -43,8 +50,15 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		questionLabel.text = questions[currentQuestionIndex]
+		let question: String = questions[currentQuestionIndex]
+		currentQuestionLabel.text = question
+		updateOffScreenLabel()
 		
+	}
+	
+	func updateOffScreenLabel() {
+		let screenWidth = view.frame.width
+		nextQuestionLabelCenterXConstraint.constant = -screenWidth
 	}
 	
 	
@@ -53,16 +67,30 @@ class ViewController: UIViewController {
 
 		
 		// Animate the alpha
-		UIView.animateWithDuration(0.5, animations: {
-			self.questionLabel.alpha = 1
-		})
+		// and the Center X constraints
+		let screenWidth = view.frame.width
+		self.nextQuestionLabelCenterXConstraint.constant = 0
+		self.currentQuestionLabelCenterXConstraint.constant += screenWidth
+		UIView.animateWithDuration(0.5,
+			delay: 0,
+			options: [],
+			animations: {
+			self.currentQuestionLabel.alpha = 0
+			self.nextQuestionLabel.alpha = 1
+			self.view.layoutIfNeeded()
+		},
+			completion: { _ in
+				swap(&self.currentQuestionLabel,
+					&self.nextQuestionLabel)
+			}
+		)
 	}
 	
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		
 		//Set the label's initial alpha
-		questionLabel.alpha = 0
+		nextQuestionLabel.alpha = 0
 	}
 	
 	
