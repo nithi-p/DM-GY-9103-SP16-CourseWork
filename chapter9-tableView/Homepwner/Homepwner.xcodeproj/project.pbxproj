@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43C7F5951C9D4CFF00FA1AA0 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7F5941C9D4CFF00FA1AA0 /* item.swift */; settings = {ASSET_TAGS = (); }; };
+		43C7F5971C9E795000FA1AA0 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7F5961C9E795000FA1AA0 /* ItemStore.swift */; settings = {ASSET_TAGS = (); }; };
 		43F37DD91C8F928200F9089C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F37DD81C8F928200F9089C /* AppDelegate.swift */; };
 		43F37DDE1C8F928200F9089C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F37DDC1C8F928200F9089C /* Main.storyboard */; };
 		43F37DE01C8F928300F9089C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F37DDF1C8F928300F9089C /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		43C7F5941C9D4CFF00FA1AA0 /* item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		43C7F5961C9E795000FA1AA0 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		43F37DD51C8F928200F9089C /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F37DD81C8F928200F9089C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43F37DDD1C8F928200F9089C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				43F37DD81C8F928200F9089C /* AppDelegate.swift */,
 				43C7F5941C9D4CFF00FA1AA0 /* item.swift */,
+				43C7F5961C9E795000FA1AA0 /* ItemStore.swift */,
 				43F37DDC1C8F928200F9089C /* Main.storyboard */,
 				43F37DDF1C8F928300F9089C /* Assets.xcassets */,
 				43F37DE11C8F928300F9089C /* LaunchScreen.storyboard */,
@@ -98,6 +101,7 @@
 				TargetAttributes = {
 					43F37DD41C8F928200F9089C = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = C4NJKFU8MZ;
 					};
 				};
 			};
@@ -139,6 +143,7 @@
 			files = (
 				43F37DED1C8F954100F9089C /* ItemsViewController.swift in Sources */,
 				43C7F5951C9D4CFF00FA1AA0 /* item.swift in Sources */,
+				43C7F5971C9E795000FA1AA0 /* ItemStore.swift in Sources */,
 				43F37DD91C8F928200F9089C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,10 +255,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nithi.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -261,10 +269,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Nithi.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
