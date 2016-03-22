@@ -77,6 +77,11 @@ class ItemsViewController: UITableViewController{
 			tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
 		}
 	}
+	
+	override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+		// update the model
+		itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
