@@ -14,6 +14,23 @@ class ItemsViewController: UITableViewController{
 	
 	var itemStore: ItemStore!
 	
+	
+	
+	
+	override func tableView(tableView: UITableView,numberOfRowsInSection section: Int) -> Int {
+		return itemStore.allItems.count
+	}
+	
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+		let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
+		let item = itemStore.allItems[indexPath.row]
+		
+		cell.textLabel?.text = item.name
+		cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+		
+		return cell
+	}
+	
 	@IBAction func addNewItem(sender: AnyObject) {
 		print("add")
 		
@@ -30,6 +47,7 @@ class ItemsViewController: UITableViewController{
 		}
 		
 	}
+	
 	
 	@IBAction func toggleEditingMode(sender: AnyObject){
 		print("edit")
@@ -48,18 +66,16 @@ class ItemsViewController: UITableViewController{
 		
 	}
 	
-	override func tableView(tableView: UITableView,numberOfRowsInSection section: Int) -> Int {
-		return itemStore.allItems.count
-	}
-	
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-		let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
-		let item = itemStore.allItems[indexPath.row]
-		
-		cell.textLabel?.text = item.name
-		cell.detailTextLabel?.text = "$\(item.valueInDollars)"
-		
-		return cell
+	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+		//if the table view is asking to commit a delete command...
+		if editingStyle == .Delete {
+			let item = itemStore.allItems[indexPath.row]
+			//remove item from the store
+			itemStore.removeItem(item)
+			
+			//Also remove that row from the table view with animation
+			tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+		}
 	}
 
 	override func viewDidLoad() {
