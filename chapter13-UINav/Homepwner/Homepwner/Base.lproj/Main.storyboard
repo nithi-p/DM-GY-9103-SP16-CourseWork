@@ -101,7 +101,13 @@
                             <outlet property="delegate" destination="zvr-h0-3IF" id="VAU-nk-Rli"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Homepwner" id="Qbu-cK-Jj7"/>
+                    <navigationItem key="navigationItem" title="Homepwner" id="Qbu-cK-Jj7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3SH-tS-Pic">
+                            <connections>
+                                <action selector="addNewItem:" destination="zvr-h0-3IF" id="hiI-cV-XQh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxi-LH-Mwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
