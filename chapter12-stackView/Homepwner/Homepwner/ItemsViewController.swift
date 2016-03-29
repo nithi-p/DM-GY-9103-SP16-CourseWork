@@ -115,6 +115,19 @@ class ItemsViewController: UITableViewController{
 		// update the model
 		itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
 	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "ShowItem" {
+			//check which row is just tapped
+			if let row = tableView.indexPathForSelectedRow?.row {
+				// get the item
+				let item = itemStore.allItems[row]
+				let detailViewController = segue.destinationViewController as! DetailViewController
+				detailViewController.item = item
+				
+			}
+		}
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

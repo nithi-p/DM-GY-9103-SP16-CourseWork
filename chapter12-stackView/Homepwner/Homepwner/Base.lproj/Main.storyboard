@@ -54,22 +54,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJN-xU-d3D">
-                                            <rect key="frame" x="27" y="8" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJN-xU-d3D">
+                                            <rect key="frame" x="27" y="8" width="42" height="20"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pR3-Q6-6XA">
-                                            <rect key="frame" x="27" y="35" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pR3-Q6-6XA">
+                                            <rect key="frame" x="27" y="34" width="29" height="22"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntc-Pp-Ryn">
-                                            <rect key="frame" x="544" y="21" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntc-Pp-Ryn">
+                                            <rect key="frame" x="546" y="22" width="40" height="20"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -92,7 +92,7 @@
                                     <outlet property="nameLabel" destination="IJN-xU-d3D" id="9xI-Ws-j5J"/>
                                     <outlet property="serialNumberLabel" destination="pR3-Q6-6XA" id="ie9-8V-wyc"/>
                                     <outlet property="valueLabel" destination="Ntc-Pp-Ryn" id="cqZ-iY-39Q"/>
-                                    <segue destination="JII-1p-8Fb" kind="show" id="HW7-Y7-fIw"/>
+                                    <segue destination="JII-1p-8Fb" kind="show" identifier="ShowItem" id="HW7-Y7-fIw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="491" y="296"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="wfo-u1-RM4">
             <objects>
-                <viewController id="JII-1p-8Fb" sceneMemberID="viewController">
+                <viewController id="JII-1p-8Fb" customClass="DetailViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kIf-Y5-Eu0"/>
                         <viewControllerLayoutGuide type="bottom" id="ITO-Ai-TCc"/>
@@ -202,6 +202,12 @@
                             <constraint firstItem="pKT-YK-owx" firstAttribute="top" secondItem="kIf-Y5-Eu0" secondAttribute="bottom" constant="8" id="zoV-Ot-UWw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="DsN-nu-OUd" id="Qik-zY-KQm"/>
+                        <outlet property="nameField" destination="pWN-MB-1kH" id="Qt6-Zn-lBQ"/>
+                        <outlet property="serialNumberField" destination="EeJ-TC-uEp" id="Qnu-1h-i6g"/>
+                        <outlet property="valueField" destination="Rsg-k8-t9T" id="eSU-Pn-4W0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ar5-Xp-yCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
