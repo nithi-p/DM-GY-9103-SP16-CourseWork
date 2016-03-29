@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zvr-h0-3IF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Items View Controller-->
@@ -46,15 +47,51 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" id="gvV-df-dVc">
-                                <rect key="frame" x="0.0" y="88" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="gvV-df-dVc" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gvV-df-dVc" id="b6K-HW-E23">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJN-xU-d3D">
+                                            <rect key="frame" x="27" y="8" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pR3-Q6-6XA">
+                                            <rect key="frame" x="27" y="35" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntc-Pp-Ryn">
+                                            <rect key="frame" x="544" y="21" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="IJN-xU-d3D" firstAttribute="top" secondItem="b6K-HW-E23" secondAttribute="topMargin" id="MhA-JY-035"/>
+                                        <constraint firstItem="IJN-xU-d3D" firstAttribute="leading" secondItem="b6K-HW-E23" secondAttribute="leadingMargin" constant="19" id="O1g-uI-HQ7"/>
+                                        <constraint firstItem="pR3-Q6-6XA" firstAttribute="bottom" secondItem="b6K-HW-E23" secondAttribute="bottomMargin" id="PH8-20-SQV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ntc-Pp-Ryn" secondAttribute="trailing" constant="6" id="lKB-GH-ZiX"/>
+                                        <constraint firstItem="Ntc-Pp-Ryn" firstAttribute="centerY" secondItem="b6K-HW-E23" secondAttribute="centerY" id="lZ7-V8-F8t"/>
+                                        <constraint firstItem="pR3-Q6-6XA" firstAttribute="leading" secondItem="IJN-xU-d3D" secondAttribute="leading" id="rsu-xq-6dd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="IJN-xU-d3D" id="9xI-Ws-j5J"/>
+                                    <outlet property="serialNumberLabel" destination="pR3-Q6-6XA" id="ie9-8V-wyc"/>
+                                    <outlet property="valueLabel" destination="Ntc-Pp-Ryn" id="cqZ-iY-39Q"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
