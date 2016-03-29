@@ -14,41 +14,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="S1i-lC-1G2">
-                            <rect key="frame" x="0.0" y="64" width="600" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-bq-PnN">
-                                    <rect key="frame" x="8" y="15" width="288" height="30"/>
-                                    <animations/>
-                                    <state key="normal" title="Edit"/>
-                                    <connections>
-                                        <action selector="toggleEditingMode:" destination="zvr-h0-3IF" eventType="touchUpInside" id="rSP-94-Rzu"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olN-Lc-Gzb">
-                                    <rect key="frame" x="304" y="15" width="288" height="30"/>
-                                    <animations/>
-                                    <state key="normal" title="Add"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="zvr-h0-3IF" eventType="touchUpInside" id="eMD-Qe-JoV"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <animations/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="Jg2-bq-PnN" firstAttribute="centerY" secondItem="S1i-lC-1G2" secondAttribute="centerY" id="3vx-l2-a3m"/>
-                                <constraint firstAttribute="trailing" secondItem="olN-Lc-Gzb" secondAttribute="trailing" constant="8" id="6Qr-Xc-07U"/>
-                                <constraint firstItem="olN-Lc-Gzb" firstAttribute="centerY" secondItem="S1i-lC-1G2" secondAttribute="centerY" id="JGk-JO-h0N"/>
-                                <constraint firstItem="Jg2-bq-PnN" firstAttribute="leading" secondItem="S1i-lC-1G2" secondAttribute="leading" constant="8" id="tH5-Y2-izi"/>
-                                <constraint firstItem="olN-Lc-Gzb" firstAttribute="width" secondItem="Jg2-bq-PnN" secondAttribute="width" id="txw-M9-oXn"/>
-                                <constraint firstItem="olN-Lc-Gzb" firstAttribute="leading" secondItem="Jg2-bq-PnN" secondAttribute="trailing" constant="8" id="yHB-RZ-15P"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="gvV-df-dVc" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="152" width="600" height="65"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gvV-df-dVc" id="b6K-HW-E23">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
@@ -186,7 +154,7 @@
                                                 <rect key="frame" x="50" y="0.0" width="510" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="JII-1p-8Fb" id="tTw-dI-JKu"/>
                                                 </connections>

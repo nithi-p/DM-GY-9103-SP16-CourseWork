@@ -66,22 +66,7 @@ class ItemsViewController: UITableViewController{
 	}
 	
 	
-	@IBAction func toggleEditingMode(sender: AnyObject){
-		print("edit")
-		// If in editting mode..
-		if editing {
-			// Change text of button
-			sender.setTitle("Edit", forState: .Normal)
-			// turn off editing mode
-			setEditing(false, animated: true)
-		}else{
-			// change text
-			sender.setTitle("Done", forState: .Normal)
-			// enter editting
-			setEditing(true, animated: true)
-		}
-		
-	}
+	
 	
 	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
 		//if the table view is asking to commit a delete command...
@@ -131,11 +116,6 @@ class ItemsViewController: UITableViewController{
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-		
-		let insets = UIEdgeInsets(top: statusBarHeight, left:0, bottom:0, right:0)
-		tableView.contentInset = insets
-		tableView.scrollIndicatorInsets = insets
 		
 		tableView.rowHeight = UITableViewAutomaticDimension
 		tableView.estimatedRowHeight = 65
@@ -145,6 +125,11 @@ class ItemsViewController: UITableViewController{
 		super.viewWillAppear(animated)
 		
 		tableView.reloadData()
+	}
+	
+	required init?(coder aDecoder: NSCoder){
+		super.init(coder: aDecoder)
+		navigationItem.leftBarButtonItem = editButtonItem()
 	}
 	
 }
