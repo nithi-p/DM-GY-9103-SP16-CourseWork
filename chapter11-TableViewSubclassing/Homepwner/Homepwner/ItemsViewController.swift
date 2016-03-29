@@ -23,6 +23,12 @@ class ItemsViewController: UITableViewController{
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
 		let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
+		
+		//Update the label for the new size
+		cell.updateLabels()
+		
+		
+		
 		let item = itemStore.allItems[indexPath.row]
 		
 		//configure the cell with the item
@@ -30,6 +36,13 @@ class ItemsViewController: UITableViewController{
 		cell.serialNumberLabel.text = item.serialNumber
 		cell.valueLabel.text = "$\(item.valueInDollars)"
 		
+		
+		//Bronze challenge
+		if ( item.valueInDollars < 50 ) {
+			cell.valueLabel.textColor = UIColor.greenColor()
+		} else {
+			cell.valueLabel.textColor = UIColor.redColor()
+		}
 		
 		
 		return cell
@@ -111,7 +124,8 @@ class ItemsViewController: UITableViewController{
 		tableView.contentInset = insets
 		tableView.scrollIndicatorInsets = insets
 		
-		tableView.rowHeight = 65
+		tableView.rowHeight = UITableViewAutomaticDimension
+		tableView.estimatedRowHeight = 65
 	}
 	
 }
