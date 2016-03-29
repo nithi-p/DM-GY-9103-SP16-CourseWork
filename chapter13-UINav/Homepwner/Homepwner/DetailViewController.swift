@@ -19,7 +19,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 		view.endEditing(true)
 	}
 	
-	var item: Item!
+	var item: Item! {
+		didSet {
+			navigationItem.title = item.name
+		}
+	}
 	
 	/* formatter */
 	
@@ -54,6 +58,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
 	
 	override func viewWillDisappear(animated: Bool) {
 		super.viewWillDisappear(animated)
+		
+		//clear first responder
+		view.endEditing(true)
 		
 		//"Save" Changes to item
 		item.name = nameField.text ?? ""
