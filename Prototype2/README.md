@@ -1,7 +1,7 @@
 # Here is the link to my prototype 2:
 # https://invis.io/6G6SQKOF7
 
-Some screenshots of the prototype 2
+
 
 
 ### Improvement from the last prototype:
