@@ -37,7 +37,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
 		presentViewController(imagePicker, animated: true, completion: nil)
 	}
 	
-	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+	func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
 		//get picked image from info dictionary
 		let image = info[UIImagePickerControllerOriginalImage] as! UIImage
 		
