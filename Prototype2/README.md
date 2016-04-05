@@ -4,7 +4,7 @@
 
 
 
-### Improvement from the last prototype:
+### Improvements from the last prototype:
 * Changed the name and put some description to be more easy to understand what the app does
 * Added home buton
 * Simplified overall workflow, started with the idea that we will provide the stamp or sticker instead of letting user to print by themselves.
@@ -14,7 +14,7 @@
 * Sender
 * Receiver
 
-### As a sender, this app allow you to..
+### As a sender, this app allows you to..
 * Scan QR Code
 * Record a video
 * Overwrite a video
