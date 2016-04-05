@@ -24,6 +24,17 @@
 ### As a receiver, you can...
 * Scan QR code to view a video
 
+
+### App structure
+* Main view
+** CameraViewController (for scanning QR Code)
+
+* Video view
+** VideoViewController (display the video)
+
+* Video recording view
+** VideoRecordingViewController ( for recording video)
+
 ________________________________________________________________________________
 
 

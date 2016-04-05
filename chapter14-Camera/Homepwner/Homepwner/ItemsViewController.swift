@@ -14,7 +14,7 @@ class ItemsViewController: UITableViewController{
 	
 	var itemStore: ItemStore!
 	
-	
+	var imageStore: ImageStore!
 	
 	
 	override func tableView(tableView: UITableView,numberOfRowsInSection section: Int) -> Int {
@@ -84,6 +84,10 @@ class ItemsViewController: UITableViewController{
 			
 			//remove item from the store
 			self.itemStore.removeItem(item)
+				
+				
+			// IMAGE ! Remove item's image for the image store 
+				self.imageStore.deleteImageForKey(item.itemKey)
 			
 			//Also remove that row from the table view with animation
 			self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
@@ -109,6 +113,7 @@ class ItemsViewController: UITableViewController{
 				let item = itemStore.allItems[row]
 				let detailViewController = segue.destinationViewController as! DetailViewController
 				detailViewController.item = item
+				detailViewController.imageStore = imageStore
 				
 			}
 		}
