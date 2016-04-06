@@ -91,6 +91,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
 		dateLabel.text = "\(item.dateCreated)"*/
 		valueField.text = numberFormatter.stringFromNumber(item.valueInDollars)
 		dateLabel.text  = dateFormatter.stringFromDate(item.dateCreated)
+		
+		let key = item.itemKey
+		
+		let imageToDisplay = imageStore.imageForKey(key)
+		imageView.image = imageToDisplay
 	}
 	
 	override func viewWillDisappear(animated: Bool) {
