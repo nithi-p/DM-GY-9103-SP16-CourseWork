@@ -72,6 +72,8 @@ class Item: NSObject, NSCoding {
 		serialNumber = aDecoder.decodeObjectForKey("serialNumber") as! String?
 		
 		valueInDollars = aDecoder.decodeIntegerForKey("valueInDollars")
+		
+		super.init()
 	}
 	
 	
