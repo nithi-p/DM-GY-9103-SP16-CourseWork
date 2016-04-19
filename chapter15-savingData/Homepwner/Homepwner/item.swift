@@ -15,6 +15,11 @@ class Item: NSObject, NSCoding {
 	let dateCreated: NSDate
 	let itemKey : String
 	
+	
+
+	
+	
+	
 	init(name: String, serialNumber: String?, valueInDollars: Int){
 		self.name = name
 		self.valueInDollars = valueInDollars
@@ -49,7 +54,6 @@ class Item: NSObject, NSCoding {
 		}
 	}
 	
-	
 	//NSCoding protocal
 	func encodeWithCoder(aCoder: NSCoder) {
 		aCoder.encodeObject(name, forKey: "name")
@@ -61,6 +65,14 @@ class Item: NSObject, NSCoding {
 	}
 	
 	
+	required init?(coder aDecoder: NSCoder) {
+		name = aDecoder.decodeObjectForKey("name") as! String
+		dateCreated = aDecoder.decodeObjectForKey("dateCreated") as! NSDate
+		itemKey = aDecoder.decodeObjectForKey("itemKey") as! String
+		serialNumber = aDecoder.decodeObjectForKey("serialNumber") as! String?
+		
+		valueInDollars = aDecoder.decodeIntegerForKey("valueInDollars")
+	}
 	
 	
 
